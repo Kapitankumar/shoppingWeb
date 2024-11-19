@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    .container {
+      width: 80%;
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      color: #333;
+    }
+    .section {
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin: 10px 0 5px;
+    }
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0 15px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    .order-summary, .payment-section {
+      background-color: #f9f9f9;
+      padding: 15px;
+      border-radius: 8px;
+    }
+    .order-item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+    .total {
+      font-weight: bold;
+    }
+    button {
+      width: 100%;
+      padding: 15px;
+      background-color: #6483ff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #16cd12;
+    }
+
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Checkout</h2>
+
+  <!-- Billing Address Section -->
+  <div class="section">
+    <h3>Billing Address</h3>
+    <label for="billing-name">Full Name</label>
+    <input type="text" id="billing-name" name="billing-name" required>
+
+    <label for="billing-email">Email</label>
+    <input type="email" id="billing-email" name="billing-email" required>
+
+    <label for="billing-address">Address</label>
+    <input type="text" id="billing-address" name="billing-address" required>
+
+    <label for="billing-city">City</label>
+    <input type="text" id="billing-city" name="billing-city" required>
+
+    <label for="billing-state">State</label>
+    <select id="billing-state" name="billing-state" required>
+      <option value="Select State">Select State</option>
+      <option value="Andhra Pradesh">Andhra Pradesh</option>
+      <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+      <option value="Assam">Assam</option>
+      <option value="Bihar">Bihar</option>
+      <option value="Chhattisgarh">Chhattisgarh</option>
+      <option value="Goa">Goa</option>
+      <option value="Gujarat">Gujarat</option>
+      <option value="Haryana">Haryana</option>
+      <option value="Himachal Pradesh">Himachal Pradesh</option>
+      <option value="Jharkhand">Jharkhand</option>
+      <option value="Karnataka">Karnataka</option>
+      <option value="Kerala">Kerala</option>
+      <option value="Madhya Pradesh">Madhya Pradesh</option>
+      <option value="Maharashtra">Maharashtra</option>
+      <option value="Manipur">Manipur</option>
+      <option value="Meghalaya">Meghalaya</option>
+      <option value="Mizoram">Mizoram</option>
+      <option value="Nagaland">Nagaland</option>
+      <option value="Odisha">Odisha</option>
+      <option value="Punjab">Punjab</option>
+      <option value="Rajasthan">Rajasthan</option>
+      <option value="Sikkim">Sikkim</option>
+      <option value="Tamil Nadu">Tamil Nadu</option>
+      <option value="Telangana">Telangana</option>
+      <option value="Tripura">Tripura</option>
+      <option value="Uttar Pradesh">Uttar Pradesh</option>
+      <option value="Uttarakhand">Uttarakhand</option>
+      <option value="West Bengal">West Bengal</option>  
+      <!-- Add more options as needed -->
+    </select>
+
+    <label for="billing-pin">PIN Code</label>
+    <input type="text" id="billing-pin" name="billing-pin" required>
+  </div>
+
+  <!-- Shipping Address Section -->
+  <div class="section">
+    <h3>Shipping Address</h3>
+    <label for="shipping-name">Full Name</label>
+    <input type="text" id="shipping-name" name="shipping-name" required>
+
+    <label for="shipping-address">Address</label>
+    <input type="text" id="shipping-address" name="shipping-address" required>
+
+    <label for="shipping-city">City</label>
+    <input type="text" id="shipping-city" name="shipping-city" required>
+
+    <label for="shipping-state">State</label>
+    <select id="shipping-state" name="shipping-state" required>
+      <option value="Select State">Select State</option>
+      <option value="Andhra Pradesh">Andhra Pradesh</option>
+      <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+      <option value="Assam">Assam</option>
+      <option value="Bihar">Bihar</option>
+      <option value="Chhattisgarh">Chhattisgarh</option>
+      <option value="Goa">Goa</option>
+      <option value="Gujarat">Gujarat</option>
+      <option value="Haryana">Haryana</option>
+      <option value="Himachal Pradesh">Himachal Pradesh</option>
+      <option value="Jharkhand">Jharkhand</option>
+      <option value="Karnataka">Karnataka</option>
+      <option value="Kerala">Kerala</option>
+      <option value="Madhya Pradesh">Madhya Pradesh</option>
+      <option value="Maharashtra">Maharashtra</option>
+      <option value="Manipur">Manipur</option>
+      <option value="Meghalaya">Meghalaya</option>
+      <option value="Mizoram">Mizoram</option>
+      <option value="Nagaland">Nagaland</option>
+      <option value="Odisha">Odisha</option>
+      <option value="Punjab">Punjab</option>
+      <option value="Rajasthan">Rajasthan</option>
+      <option value="Sikkim">Sikkim</option>
+      <option value="Tamil Nadu">Tamil Nadu</option>
+      <option value="Telangana">Telangana</option>
+      <option value="Tripura">Tripura</option>
+      <option value="Uttar Pradesh">Uttar Pradesh</option>
+      <option value="Uttarakhand">Uttarakhand</option>
+      <option value="West Bengal">West Bengal</option>  
+      <!-- Add more options as needed -->
+    </select>
+
+    <label for="shipping-pin">PIN Code</label>
+    <input type="text" id="shipping-pin" name="shipping-pin" required>
+  </div>
+
+  <!-- Order Summary Section -->
+  <div class="section order-summary">
+    <h3>Order Summary</h3>
+    <a href="CA3.html"><button>
+    <h3>Please select an item to place order</h3>
+    </a></button>
+    
+    <div class="order-item total">
+      <span>Total</span>
+      <span>₹0.00</span>
+    </div>
+  </div>
+
+  <!-- Payment Section -->
+  <div class="section payment-section">
+    <h3>Payment Information</h3>
+    <label for="card-name">Name on Card</label>
+    <input type="text" id="card-name" name="card-name" required>
+
+    <label for="card-number">Card Number</label>
+    <input type="text" id="card-number" name="card-number" required>
+
+    <label for="card-expiry">Expiry Date</label>
+    <input type="text" id="card-expiry" name="card-expiry" placeholder="MM/YY" required>
+
+    <label for="card-cvc">CVC</label>
+    <input type="text" id="card-cvc" name="card-cvc" required>
+  </div>
+
+  <!-- Place Order Button -->
+  <button type="submit">Place Order</button>
+</div>
+
+</body>
+</html>
